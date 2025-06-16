@@ -26,7 +26,6 @@ make
 
 
 The **broker** (server) acts as a central relay for client messages and manages chat rooms.
-
 ## 🚀 Getting Started
 
 ### 1. Build
