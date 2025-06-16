@@ -1,0 +1,14 @@
+# Compiled object files
+*.o
+
+# Executable file
+chat_app
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+*.bak
+

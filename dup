@@ -1,0 +1,16 @@
+CXX = g++
+CXXFLAGS = -std=c++17 -pthread -Wall -Wextra -O2
+TARGET = chat_app
+SRCDIR = src
+SRCS = chat_app.cpp $(SRCDIR)/ChatClient.cpp $(SRCDIR)/ChatServer.cpp
+OBJS = $(SRCS:.cpp=.o)
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+$(SRCDIR)/%.o: $(SRCDIR)/%.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+clean: rm -f $(OBJS) $(TARGET)
+
